@@ -1,4 +1,6 @@
 btn = document.querySelector('#btn');
+ok = document.querySelector('#ok');
+con = document.querySelector('#con');
 form = document.forms[0];
 moyenne = document.querySelector('#moyenne');
 
@@ -50,7 +52,20 @@ btn.addEventListener('click', () => {
     h3Moyenne.innerHTML = "Moyenne :";
     moyenne.value = calcul;
 
+    body = document.querySelector('body');
+
+    document.body.removeChild(body.lastElementChild);
+    document.body.removeChild(body.lastElementChild);
+
     document.body.appendChild(h3Moyenne);
     document.body.appendChild(moyenne);
 
+});
+
+ok.addEventListener('click', () => {
+    alert('vous avez été ajouté à la base de données avec succès !');
+});
+
+con.addEventListener('click', () => {
+    alert('Vous êtes 18e.');
 });
