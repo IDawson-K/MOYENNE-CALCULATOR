@@ -1,0 +1,17 @@
+/* ─── Reset ──────────────────────────────────────────────────────────────── */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ─── Body ───────────────────────────────────────────────────────────────── */
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
