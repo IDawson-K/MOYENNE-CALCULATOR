@@ -3,6 +3,23 @@ ok = document.querySelector('#ok');
 con = document.querySelector('#con');
 form = document.forms[0];
 moyenne = document.querySelector('#moyenne');
+inputs = document.querySelectorAll('input');
+
+  inputs.forEach(input => {
+    var intervalId = window.setInterval(function(){
+        if (input.value <= 8 && input.value !== "") {
+            input.style.background = "#ffcaca";
+        }
+
+        if (input.value >= 12 && input.value !== "") {
+            input.style.background = "#caffe1";
+        }
+
+        if (input.value > 8 && input.value < 12 && input.value !== "") {
+            input.style.background = "#fffaca";
+        }
+      }, 10);
+});
 
 btn.addEventListener('click', () => {
     droit = form.droit.value;
@@ -34,7 +51,6 @@ btn.addEventListener('click', () => {
     inte2 = form.inte2.value;
 
     diviseur = 60;
-    inputs = document.querySelectorAll('input');
 
     inputs.forEach(input => {
         if (input.value == "") {
@@ -65,7 +81,7 @@ btn.addEventListener('click', () => {
     } else {
         moyenne.style.color = 'green';
         h3Moyenne.style.color = 'green';
-    }
+    };
 
     document.body.appendChild(h3Moyenne);
     document.body.appendChild(moyenne);
