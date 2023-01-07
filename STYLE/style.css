@@ -12,6 +12,11 @@ button {
   border-radius: 2px;
   outline: 2px lightgray solid;
   border: none;
+  transition: 0.2s;
+}
+button:hover {
+  box-shadow: 5px 5px grey;
+  transform: scale(1.1);
 }
 
 hr {
@@ -25,4 +30,10 @@ hr {
 
 button {
   margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 1rem;
+  color: green;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
